@@ -1,0 +1,10 @@
+<div class="componentC">
+    <h5>We have {{su.products.length}} products available for your enjoyment and health in our store</h5>
+    <h5>We delivered {{su.orders.length}} customer orders so far</h5>
+    <div>
+        <h5 class="fade-in" *ngIf="su.New_User">Hey {{su.guest}}, welcome to your first purchase :)</h5>
+        <h5 class="fade-in" *ngIf="su.Login_Cart">Hey {{su.guest}}, you have open cart from {{moment(su.cart[0].date).format('MMMM Do YYYY')}} </h5>
+        <h5 class="fade-in" *ngIf="su.Login_Order">Hey {{su.guest}}, your last order was at  {{moment(su.order.OrderDate).format('MMMM Do YYYY')}}, We glad that you come back :)</h5>
+          
+    </div>
+</div>

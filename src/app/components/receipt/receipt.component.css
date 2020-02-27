@@ -1,0 +1,144 @@
+.list::-webkit-scrollbar {
+    width: 1%;
+}
+  
+.list::-webkit-scrollbar-track {
+    background: rgb(8, 8, 8); 
+}
+   
+.list::-webkit-scrollbar-thumb {
+    background: rgba(245, 245, 245,0.6);
+}
+
+.recipt_component{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.inp{
+    color: white;
+ }
+
+.placeholder {
+    color:  #dce2f4 ;
+  }
+
+.search_form::ng-deep .mat-focused .mat-form-field-label {
+    color: white !important;
+}
+  
+.search_form::ng-deep.mat-form-field-underline {
+    background-color: white !important;
+} 
+  
+.search_form::ng-deep.mat-form-field-ripple {
+   background-color: white !important;
+}
+
+.search_form{
+    position: fixed;
+    z-index: 999;
+    top: 10%;
+    left: 0%;
+}
+
+mat-form-field{
+    width: 70%;
+
+}
+
+ .navBar{
+     height: 10%;
+     width: 50%;
+     position: fixed;
+     z-index: 999;
+     
+
+ }
+
+h3{
+    top: 8px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing:1.5px;
+    margin:  auto;
+    position: relative;
+  
+}
+
+.link{
+    right: 5%;
+    top: -1%;
+    position: absolute;
+    font-weight: bold;
+}
+  
+.link:hover{
+   color: red;
+   text-decoration-line:underline;
+   
+}
+  
+.list{
+    height: 50%;
+    text-align: center;
+    position: relative;
+    top: 8%;
+    width: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+    border: solid grey 0.5px;
+}
+
+.box_product{
+    position: relative;
+    width: 100%;
+}
+
+.box_product:hover{
+    box-shadow: 2px 2px 2px 2px grey;
+}
+
+img{
+    position: relative;
+    top: 5%;
+    left: 10%;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-right: 30px;
+}
+
+.box_p{
+    position: relative;
+    top: 15px;
+    left: 10%;
+    width: 50%;
+    display: inline-block;
+    text-align: left;
+}
+
+.footer{
+    padding: 10px ;
+    text-align: center;
+    position: relative;
+    top: 10%;
+
+}
+
+.text-shadow-drop-center {
+	animation: text-shadow-drop-center 0.6s both;
+}
+
+@keyframes text-shadow-drop-center {
+    0% {
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      text-shadow: 2px -2px 20px grey;
+    }
+  }
+  
+

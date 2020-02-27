@@ -1,0 +1,76 @@
+.component_Panel{
+  height: 100%;
+  width: 100%;
+}
+
+.GoShopping{
+  position: fixed;
+  right: 5%;
+  top: 15px;
+}
+
+.mat-form-field{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px auto;
+}
+
+.btn-outline-dark{
+  display: block;
+  margin: 5px auto;
+
+}
+
+p{
+  font-weight: bold;
+  position: fixed;
+  right: 5%;
+  bottom: 1%;
+}
+
+p:hover{
+  color: red;
+  text-decoration-line:underline;
+}
+
+.fade-in {
+  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .jello-horizontal {
+    animation: jello-horizontal 0.9s  both;
+  }
+
+  @keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }

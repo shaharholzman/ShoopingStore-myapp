@@ -1,0 +1,39 @@
+
+ <mat-grid-list cols="4" > 
+
+<mat-grid-tile colspan="1">
+    <div
+    class="rectangle1"
+    [ngStyle]="style1"
+    mwlResizable
+    [validateResize]="validate"
+    [enableGhostResize]="true"
+    [resizeSnapGrid]="{ left: 1, right: 1 }"
+    (resizeEnd)="onResizeEnd($event)"
+    >
+    <app-side-bar></app-side-bar> 
+  </div>
+</mat-grid-tile>
+
+<mat-grid-tile  colspan="3">
+    <div
+    class="rectangle"
+    [ngStyle]="style"
+    mwlResizable
+    [validateResize]="validate"
+    [enableGhostResize]="true"
+    [resizeSnapGrid]="{ left: 1, right: 1 }"
+    (resizeEnd)="onResizeEnd($event)"
+    >
+    <app-view></app-view>
+    <div
+    class="resize-handle-left"
+    mwlResizeHandle
+    [resizeEdges]="{ left: true }"
+    ></div>
+    </div>
+</mat-grid-tile>
+
+</mat-grid-list>  
+
+  

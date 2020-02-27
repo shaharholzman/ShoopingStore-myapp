@@ -1,0 +1,39 @@
+<div class="view">
+
+    <div class="search_form">
+     <form [formGroup]="form">
+            <mat-form-field class="example-full-width">
+             <input class="inp" matInput type="text" formControlName="name" (input)="GetProduct($event)">
+             <mat-placeholder class="placeholder">Serach</mat-placeholder>
+            </mat-form-field>
+        </form>
+    </div>
+
+
+    <mat-grid-list cols="{{sm.categories.length}}" class="categories" rowHeight="43.5px">
+        <mat-grid-tile *ngFor="let cat of sm.categories">
+            <button class="btn btn-outline-info"  id={{cat.id}} (click)="GetProductsOfCategories($event)">{{cat.name}}</button>
+        </mat-grid-tile>
+     </mat-grid-list>
+     
+
+    <div class="box_list">
+
+        <mat-grid-list cols="4" rowHeight="150px" > 
+            
+            <mat-grid-tile  class="product" *ngFor="let pro of su.products" id={{pro.id}} >
+                <img src={{pro.img}} alt="">
+                <div class="verb">
+                    <p>{{pro.name}}</p>
+                    <p><strong id={{pro.id}}>Price:</strong> {{pro.price}}$</p>
+                </div>
+                <button id={{pro.id}}  class="btn_update btn btn-outline-warning" (click)="GetProductAndForm($event)" (click)="ChangeScreen($event)">Upadte</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+        
+    </div>
+
+</div>
+
+
+

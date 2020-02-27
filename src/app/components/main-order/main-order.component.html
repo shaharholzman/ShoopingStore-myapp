@@ -1,0 +1,39 @@
+<mat-grid-list cols="2"   > 
+
+    <div class="dis" id="pdfTable"  #pdfTable >
+        <h3>Reception number: {{su.orders.length + 1}}</h3>
+        <p>-----------------------------------------------------------------</p>
+       <div class="box_product" *ngFor="let item of this.su.productsOfCart ">
+          <p><strong>Item:</strong> {{item.name}},<strong>Amount:</strong> {{item.amount}}, <strong>Price:</strong> {{item.total_price}}$</p>
+        </div>
+        <p>Amount to pay: <strong>{{su.TotalAmount}}$</strong></p>
+        <p> {{moment(date).format('MMMM Do YYYY')}}</p>
+        <p>-----------------------------------------------------------------</p>
+        <p>Thank you and goodbye !</p>
+       </div>
+
+<mat-grid-tile colspan="2" class="tilt-in-fwd-tr" *ngIf="sm.complitedOrder">
+   <img src="https://thumbs.dreamstime.com/z/vegetables-fruits-over-grocery-store-background-organic-dieting-80689477.jpg" alt="">
+    <div class="box">
+        <h3>Your purchase was made!</h3>
+        <div> 
+            <h4>To download the receipt,</h4>
+           <h4>click <strong (click)="downloadAsPDF()">here</strong></h4> 
+        </div>
+
+        <button  class="btn btn-outline-success" (click)="GoHome()">Confirmed</button>
+    </div>
+</mat-grid-tile>
+
+
+<mat-grid-tile *ngIf="!sm.complitedOrder" colspan="1">
+    <app-receipt></app-receipt>
+</mat-grid-tile>
+
+<mat-grid-tile *ngIf="!sm.complitedOrder" colspan="1">
+    <app-order></app-order>
+</mat-grid-tile>
+
+ </mat-grid-list>    
+
+    

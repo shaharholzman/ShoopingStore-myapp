@@ -1,0 +1,54 @@
+/* .component_side{
+  height: 100%;
+  width: 100%;
+} */
+
+.top{
+  /* margin-top: 4px; */
+    /* position: relative; */
+    /* top: 2.5%; */
+    width: 100%;
+    z-index: 998;
+}
+
+h3{
+    text-align: center;
+}
+
+i{
+    position: absolute;
+    right: 5px;
+    top: -1px;
+}
+
+.mat-form-field{
+    display: block;
+    width: 70%;
+    padding: 5px;
+    margin: 5px auto;
+}
+
+.btn-outline-dark{
+  display: block;
+  margin: 5px auto;
+}
+/* button[type='submit']{
+  display: block;
+  margin: 5px auto;
+  background-color:#A7E884;
+
+} */
+
+.fade-in {
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  
+  @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  

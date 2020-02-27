@@ -1,0 +1,158 @@
+.box_list::-webkit-scrollbar {
+    width: 0.5%;
+}
+  
+.box_list::-webkit-scrollbar-track {
+    background: rgb(8, 8, 8); 
+}
+   
+.box_list::-webkit-scrollbar-thumb {
+    background: rgba(245, 245, 245,0.6);
+}
+
+
+.view{
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.P_form{
+    display: inline-block;
+}
+
+.search_form{
+    position: fixed;
+    z-index: 999;
+    top: 10%;
+    left: 11%;
+}
+
+.inp{
+    color: white;
+ }
+
+.placeholder {
+    color:  #dce2f4 ;
+  }
+
+.search_form::ng-deep .mat-focused .mat-form-field-label {
+    color: white !important;
+}
+  
+.search_form::ng-deep.mat-form-field-underline {
+    background-color: white !important;
+} 
+  
+.search_form::ng-deep.mat-form-field-ripple {
+   background-color: white !important;
+}
+
+.categories{
+    letter-spacing: 50px;
+    font-weight: 400;
+    box-shadow: 2px 2px 2px 2px grey;
+    z-index: 999;
+    top: -7px;
+    z-index: 998;
+    background-color: #f4f4f4;
+
+
+}
+
+.btn{
+    position: relative;
+    font-weight: 400;
+    letter-spacing:2.5px;
+    font-family: Nike TG,Helvetica Neue,Helvetica,Arial,sans-serif;
+   margin-right: 2.5%;
+}
+
+.btn:active{
+    top: 5px;
+}
+
+mat-grid-list{
+    padding: 0px;
+    margin: 0px;
+    margin-top: 5px;
+    height: 73%;
+    overflow: auto;
+}
+
+.box_list{
+    position: relative;
+    top: -15px;
+    overflow: auto;
+    height: 76%;
+    background-color: #fff;
+
+}
+
+.product{
+    height: 100%;
+    width: 100%;
+    border: solid grey 0.5px;
+    text-align: center;
+}
+
+.product:hover  .btn_update{
+    opacity: 1;
+    background-color: #404040;
+    color: wheat; 
+   
+}
+
+img{
+    position: relative;
+    left: 20px;
+    display: inline-block;
+    height: 85px;
+    width: 85px;
+    margin: 5px;
+
+}
+
+.verb{
+    position: relative;
+    text-align: left;
+    right: 0px;
+    top: 5%;
+    margin-left: 30px;
+    width: 56%;
+    padding: 8px;
+    display: inline-block;
+
+}
+
+p{
+    margin-top: 5px;
+    line-height: 90%;
+    
+}
+
+.btn_update{
+    opacity: 0;
+    position: absolute;
+    top: 1%;
+    right: -2.5%;
+    letter-spacing:1px;
+    border-color: rgb(230, 223, 132);
+    color:rgb(230, 223, 132) ;
+}
+
+.btn_update:hover{
+    color: white;
+    background-color:  rgb(230, 223, 132);
+    border-color: black !important;
+}
+
+.add{
+    position: relative;
+    left: 80%;
+}
+
+  /* .selected{
+    background-color: rgb(105, 41, 41);
+  } */

@@ -1,0 +1,63 @@
+mat-grid-list{
+    height: 100%;
+    width: 100%;
+    position: static;
+  }
+  
+  mat-grid-tile{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: #f4f4f4;
+  }
+  
+  app-side-bar-admin,app-view-admin{
+    height: 100%;
+    width: 100%;
+  }
+  
+   mwlResizable {
+    box-sizing: border-box;
+  }
+  
+  .rectangle {
+    background-color: #fff;
+    border: solid black;
+    position: relative;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 960px;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  
+  .rectangle1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 50px;
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+  }
+  
+  .resize-handle-left,
+  .resize-handle-right {
+    position: absolute;
+    height: 100%;
+    cursor: col-resize;
+    width: 5px;
+  }
+  .resize-handle-left {
+    left: 0;
+  }
+  .resize-handle-right {
+    right: 0;
+  }
+  

@@ -1,0 +1,36 @@
+
+       <div class="navBar">
+           <i (click)="DeleteAll()" class="btn1 material-icons">
+               remove_shopping_cart
+            </i>
+           <h3 [style.width]="sm.width" >My Cart </h3>
+            <hr>
+        </div>
+        
+        <div class="list">
+            
+            <mat-grid-list  *ngFor="let pro of su.productsOfCart" cols="1" rowHeight='90px' id={{pro.id}} class="fade-in"   >
+                
+                <mat-grid-tile class="box_product"  >
+                    <i id={{pro.id}} class="x material-icons" (click)="DeleteProductFromCart($event)">close</i>
+                    <img  id={{pro.name}} src={{pro.img}} alt="">
+                    <div class="box_p">
+                        <p [style.width]="sm.width">{{pro.name}}</p>
+                        <p [style.width]="sm.width"><strong>Amount:</strong> {{pro.amount}}, <strong>Price:</strong> {{pro.total_price}}$</p>
+                    </div>
+                    
+                </mat-grid-tile>
+                
+            </mat-grid-list>
+            
+        </div>
+        
+        <mat-grid-list cols="2" rowHeight="60px" class="foter">
+            <mat-grid-tile>
+                <h6 >Amount to pay: <strong>{{su.TotalAmount}}$</strong></h6>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <button class="btn btn-outline-secondary" (click)="GoToOrderPage()">Order</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+

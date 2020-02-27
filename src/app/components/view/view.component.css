@@ -1,0 +1,267 @@
+.box_list::-webkit-scrollbar {
+    width: 0.5%;
+}
+  
+.box_list::-webkit-scrollbar-track {
+    background: rgb(8, 8, 8); 
+}
+   
+.box_list::-webkit-scrollbar-thumb {
+    background: rgba(245, 245, 245,0.6);
+}
+
+.view{
+    position: relative;
+    top: 4px;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+
+}
+
+.inp{
+    color: white;
+ }
+
+.placeholder {
+    color:  #dce2f4 ;
+  }
+
+.search_form::ng-deep .mat-focused .mat-form-field-label {
+    color: white !important;
+}
+  
+.search_form::ng-deep.mat-form-field-underline {
+    background-color: white !important;
+} 
+  
+.search_form::ng-deep.mat-form-field-ripple {
+   background-color: white !important;
+}
+
+.P_form{
+    display: inline-block;
+}
+
+.search_form{
+    position: fixed;
+    z-index: 999;
+    top: 10%;
+    left: 11%;
+}
+  
+
+.categories{
+    background-color: #f4f4f4;
+    letter-spacing: 50px;
+    font-weight: 400;
+    box-shadow: 2px 2px 2px 2px grey;
+    top: -5px;
+    z-index: 998;
+}
+
+.btn{
+    position: relative;
+   font-weight: 400;
+   letter-spacing:2.5px;
+   font-family: Nike TG,Helvetica Neue,Helvetica,Arial,sans-serif;
+   margin-top: 2px;
+   margin-left: 8%;
+}
+
+.btn:active{
+    box-shadow: none;
+    top: 5px; 
+}
+
+.box_list{
+    font-family: "Open Sans Hebrew', sans-serif";
+    color: #2B2B2B;
+    font-weight: bold!important;
+    position: relative;
+    top: -1px;
+    overflow: auto;
+    height: 73%;
+    background-color: #fff;
+}
+
+mat-grid-list{
+    padding: 0px;
+    margin: 0px;
+}
+
+mat-grid-tile{
+    display: flex;
+    width: 100%;
+}
+    
+.box_product{
+    height: 100%;
+}
+
+.btn1{
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.product{
+    border: solid grey 0.5px;
+    text-align: center;
+
+}
+
+.product:hover .btn1  {
+    font-weight: 600;
+    background-color: #404040;
+    color: wheat; 
+    opacity: 1;
+}
+
+.pro:hover{
+    border: solid black 1px!important;
+}
+
+.box{
+    position: relative;
+    top: 15%;
+    height: 100%;
+    width: 100%;
+}
+img{
+    position: absolute;
+    left: 10px;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+
+.verb{
+    text-align: left;
+    right: 0px;
+    position: absolute;
+    width: 45%;
+    padding: 5px;
+    display: inline-block;
+}
+
+p{
+    margin-top: 5px;
+}
+
+.form_input{
+    background-color: #f4f4f4;
+    padding: 10px;
+    position: fixed;
+    bottom: 20%;
+    left: 40%;
+    margin: 20px auto;
+    border: solid black;
+    height: 35%;
+    width: 50%;
+    border-radius: 10px;    
+
+}
+
+.x{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
+.x:hover{
+    color: red;
+}
+
+.p{
+    display: inline-block;
+    width: 40%;
+    margin-left: 15px;
+} 
+
+.p1{
+    display: inline-block;
+    width: 25%;
+    margin-left: 5px;
+}    
+
+.bottom_box{
+    position: relative;
+    bottom: 10px;
+    margin: 0px;
+    height: 80%;
+    width: 100%;
+    background-color: #E8E8F0;
+    border-radius: 10px;
+}    
+
+.img{
+    position: relative;
+    top: 5px;
+    left: 20%;
+    height: 130px;
+    width: 150px;
+    display: inline-block;
+    border-radius: 10px;
+}    
+
+ i:hover{
+     color: green;
+ }    
+
+ .form_add{
+     width: 50%;
+     display: inline-block;
+ }
+
+.add_input{
+     width: 50%; 
+}
+
+.add{
+    position: relative;
+    left: 80%;
+}
+
+.fade-in {
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  
+  @keyframes fade-in {
+      0% {
+        transform: translateZ(-1100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateZ(0);
+        opacity: 1;
+      }
+    }
+
+.opacity {
+    background-color: #f4f4f4;
+    position: relative;
+    top: -1px;
+    overflow: auto;
+    height: 73%;
+    animation: opacity 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  
+  @keyframes opacity {
+      0% {
+        transform: translateZ(-1100px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateZ(0);
+        opacity: 0.4;
+      }
+    }
+  
+
+.icon{
+    height: 20px;
+    width: 20px;
+}
+

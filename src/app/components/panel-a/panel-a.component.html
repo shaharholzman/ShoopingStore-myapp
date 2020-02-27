@@ -1,0 +1,124 @@
+<div class="component_Panel">
+
+  <button class="btn btn-outline-success GoShopping fade-in jello-horizontal" *ngIf="su.Have_VT" (click)="NextPageUser()">{{this.su.shopping}} shopping</button>
+  <!-- formLogin -->
+    <div *ngIf="!state_A" class="fade-in">
+  
+      <form [formGroup]="formLogin" (ngSubmit)="Login()">
+        
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" placeholder="User Name" formControlName="userName">
+          <mat-error *ngIf="formLogin.controls.userName.hasError('required')">
+            User Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+          <input matInput  type="password" placeholder="Password" formControlName="password">
+          <mat-error *ngIf="formLogin.controls.password.hasError('required')">
+            password is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        
+        <button class="btn btn-outline-dark" [disabled]="formLogin.invalid"   type="submit">submit</button>
+        
+      </form>
+      <p  (click)="GoRegister()">Not registered yet? Please sign up</p>
+      
+    </div>
+    <!-- end formLogin -->
+  
+    <!-- form register_a -->
+    <div *ngIf="state_A && !state_B" class="fade-in" >
+  
+      <form *ngIf="state_A"  class="fade-in" [formGroup]="formRegister_A" (ngSubmit)="Register_A()">
+        
+        <mat-form-field class="example-full-width">
+          <input matInput type="number" placeholder="personal ID" formControlName="personal_id">
+          <mat-error *ngIf="formRegister_A.controls.personal_id.hasError('required')">
+            personal ID is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" placeholder="User Name" formControlName="userName">
+          <mat-error *ngIf="formRegister_A.controls.userName.hasError('required')">
+            User Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+          <input matInput  type="password" placeholder="password" formControlName="password">
+          <mat-error *ngIf="formRegister_A.controls.password.hasError('required')">
+            password is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        
+        <mat-form-field>
+          <input matInput type="password" placeholder="Confirm password" formControlName="confirmPassword" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="formRegister_A.hasError('notSame')">
+            Passwords do not match
+          </mat-error>  
+        </mat-form-field>
+      
+        <button class="btn btn-outline-dark"  [disabled]="formRegister_A.invalid"   type="submit"><span>submit</span></button>
+        
+      </form>
+      <p (click)="GoRegister()">Back to login...</p>
+      
+    </div>
+    <!-- end form register_a -->
+
+
+    <!-- form register_b -->
+    <div *ngIf="state_B" class="fade-in" >
+  
+      <form *ngIf="state_B"  class="fade-in" [formGroup]="formRegister_B" (ngSubmit)="FullRegister()">
+        
+        <mat-form-field>
+          <mat-label>City</mat-label>
+          <mat-select  formControlName="city">
+              <mat-option *ngFor="let city of su.cities" [value]="city.name">
+                  {{city.name}}
+              </mat-option>
+          </mat-select>
+          <mat-error *ngIf="formRegister_B.controls.city.hasError('required')">
+
+              City is <strong>required</strong>
+          </mat-error>
+          
+      </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" placeholder="Street" formControlName="street">
+          <mat-error *ngIf="formRegister_B.controls.street.hasError('required')">
+            street is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+          <input matInput  type="text" placeholder="first name" formControlName="first_name">
+          <mat-error *ngIf="formRegister_B.controls.first_name.hasError('required')">
+            First Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput  type="text" placeholder="Last Name" formControlName="last_name">
+          <mat-error *ngIf="formRegister_B.controls.last_name.hasError('required')">
+          Last Name is<strong> password</strong>
+          </mat-error>
+        </mat-form-field>
+        
+      
+        <button class="btn btn-outline-dark"  [disabled]="formRegister_B.invalid"  type="submit"><span>submit</span></button>
+        
+      </form>
+      
+    </div>
+    <!-- end form register_b -->
+      
+  
+  </div>
+  

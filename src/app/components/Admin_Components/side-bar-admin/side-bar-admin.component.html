@@ -1,0 +1,93 @@
+
+  <div class="top">
+    <h3>DashBord</h3>
+    <i (click)="GetFormAdd()" class="material-icons">
+      add_box
+    </i>
+    <hr>
+  </div>
+  
+  <!-- Form/Add Product -->
+  <div *ngIf="sa.state_add" class="fade-in">
+    <form [formGroup]="addform" (ngSubmit) ="AddProduct()" >
+      
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Name of product" formControlName="name">
+        <mat-error *ngIf="addform.controls.name.hasError('required')">
+          Name Item is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+        <input  matInput type="number" placeholder="Price" formControlName="price">
+        <mat-error *ngIf="addform.controls.price.hasError('required')">
+          Price is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+        <input  matInput type="text" placeholder="Image URL" formControlName="img">
+        <mat-error *ngIf="addform.controls.price.hasError('required')">
+          Image is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      
+      <mat-form-field >
+        <mat-label>Category</mat-label>
+        <mat-select  formControlName="category">
+          <mat-option  *ngFor="let category of sm.categories" [value]="category.id">
+            {{category.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="addform.controls.category.hasError('required')">
+          Category is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      
+      <button class="btn btn-outline-dark" [disabled]="addform.invalid" type="submit">submit</button>
+      
+    </form>
+  </div>
+  
+  <!-- Form/Update Product -->
+  <div *ngIf="sa.state_update" class="fade-in">
+    <form [formGroup]="updateform" id={{sa.productToUpdate[0].id}} (ngSubmit) ="UpdateProduct($event)" >
+      
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Name of product" [(ngModel)]="sa.productToUpdate[0].name" formControlName="name">
+        <mat-error *ngIf="updateform.controls.name.hasError('required')">
+          Name Item is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+        <input  matInput type="number" placeholder="Price" [(ngModel)]="sa.productToUpdate[0].price" formControlName="price">
+        <mat-error *ngIf="updateform.controls.price.hasError('required')">
+          Price is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+        <input  matInput type="text" placeholder="Image URL" [(ngModel)]="sa.productToUpdate[0].img" formControlName="img">
+        <mat-error *ngIf="updateform.controls.price.hasError('required')">
+          Image is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      
+      <mat-form-field >
+        <mat-label>Category</mat-label>
+        <mat-select  [(ngModel)]="sa.productToUpdate[0].categories_id"  formControlName="categories_id">
+          <mat-option  *ngFor="let category of sm.categories" [value]="category.id">
+            {{category.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="updateform.controls.categories_id.hasError('required')">
+          Category is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      
+      <button class="btn btn-outline-dark" [disabled]="updateform.invalid"   type="submit">submit</button>
+      
+    </form>
+  </div>
+  

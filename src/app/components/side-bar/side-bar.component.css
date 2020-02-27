@@ -1,0 +1,127 @@
+.list::-webkit-scrollbar {
+    width: 2.5%;
+}
+  
+.list::-webkit-scrollbar-track {
+    background: rgb(8, 8, 8); 
+}
+   
+.list::-webkit-scrollbar-thumb {
+    background: rgba(245, 245, 245,0.6);
+}
+  
+.navBar{
+    width: 100%;
+    height: 8%;
+    z-index: 998;
+    border:0.5px solid black;
+    background-color: #f4f4f4;
+    overflow: hidden;
+} 
+
+i:hover{
+    color: red;
+}
+
+.btn1{
+    position: relative;
+    left: 8px;
+    top: 5px;
+}
+
+.icon{
+    height: 40px;
+}
+
+h3{
+    position: fixed;
+    top: 22%;
+    left: 8%;
+    letter-spacing: 2px;
+    font-weight: 400;
+    /* text-align: center; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+.list{
+   background-color: #fff;
+   overflow: auto;
+   height: 60%;
+   border:0.5px  solid grey;
+
+}
+
+mat-grid-list{
+    padding: 0px;
+    margin: 0px;
+}
+
+.box_product:hover{
+box-shadow:  1px 1px 1px 1px grey;
+}
+
+.x{
+    position: relative;
+    left: 0px;
+}
+img{
+    
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.box_p{ 
+    position: relative;
+    right: -5px;
+    display: inline-block;
+    height: 70%;
+    width: 70%;
+}
+
+p{
+    white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+    width: 100%;
+}
+
+.foter{
+     overflow: auto; 
+
+}
+
+.fade-in {
+    border: solid grey 0.5px;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
+  }
+  
+  @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  
+    .slide-out-left {
+                animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+
+    @keyframes slide-out-left {
+        0% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(-1000px);
+          opacity: 0;
+        }
+      }
+      

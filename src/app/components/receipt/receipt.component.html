@@ -1,0 +1,37 @@
+<div class="recipt_component">
+
+    
+    <div class="navBar">
+        <div class="search_form">
+            <form [formGroup]="form">
+                <mat-form-field class="example-full-width">
+                    <input class="inp" matInput type="text" [(ngModel)]="searchedTerm" formControlName="name" >
+                    <mat-placeholder class="placeholder">Serach</mat-placeholder>
+ 
+                </mat-form-field>
+            </form>
+        </div>
+        <h3>My Cart</h3>
+        <p class="link" (click)="GoToCartPage()">Back to Shop...</p>
+        <hr>
+    </div>
+    
+    <div class="list" id="pdfTable"  #pdfTable >
+        <div class="box_product" *ngFor="let item of this.su.productsOfCart ">
+            <img  src={{item.img}} alt="">
+           <div class="box_p">
+               <strong>Item: </strong>
+               <span [innerHTML]="item.name | highlight: searchedTerm"></span>
+               <p><strong>Amount:</strong> {{item.amount}}, <strong>Price:</strong> {{item.total_price}}$</p>
+            </div>
+        <hr>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <h4 class="text-shadow-drop-center">No Changes Permitted Here</h4>
+        <p>Amount to pay: <strong>{{su.TotalAmount}}$</strong></p>
+    </div>
+    
+    
+</div>
