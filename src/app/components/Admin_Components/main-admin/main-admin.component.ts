@@ -43,6 +43,7 @@ export class MainAdminComponent implements OnInit {
   
   ngOnInit() {
 
+    this.su.stateLog = true
     // verify
     this.sa.verify().subscribe(
       res => {

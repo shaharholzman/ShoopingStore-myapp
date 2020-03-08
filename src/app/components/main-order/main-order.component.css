@@ -3,8 +3,6 @@ mat-grid-list{
     width: 100%;
     font-family: Nike TG,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 400;
-    /* position: static; */
-
   }
   
   mat-grid-tile{
@@ -16,7 +14,6 @@ mat-grid-list{
   app-order,app-receipt{
     border: solid grey 0.5px;
     position: relative;
-    /* top: 2.5%; */
     height: 100%;
     width: 100%;
   }

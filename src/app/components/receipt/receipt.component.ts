@@ -11,10 +11,13 @@ import { FormBuilder, FormGroup} from '@angular/forms';
   templateUrl: './receipt.component.html',
   styleUrls: ['./receipt.component.css']
 })
+
 export class ReceiptComponent implements OnInit {
 
   public form:FormGroup
-  
+  public searchResults:any
+  public searchVal:string
+
   constructor(
     public router:Router,
     public sm:MainService,
@@ -33,10 +36,12 @@ export class ReceiptComponent implements OnInit {
 
     this.sm.BringCartAndProducts()
 
-
+    this.searchResults = this.su.productsOfCart
+    
     this.form = this.fb.group({
       name:[""]});
       
+
   }
 
 }

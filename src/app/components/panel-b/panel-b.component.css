@@ -4,18 +4,7 @@ height: 100%;
 width: 100%  ;
 }
 
-
-/* .box{
-    position: fixed;
-    left: 3.5%;
-    top: 25%;
-    /* top: -50%;*/
-    /* height: 100%;
-    width: 100%;
-} */ 
-  
-
-  .glow{
+.glow{
     opacity: 4;
     font-family: 'Arvo', serif;
     font-weight: 300;
@@ -25,7 +14,8 @@ width: 100%  ;
     position: absolute;
     top: 200px;
     left: 50%;
-  }
+}
+
 .text-pop-up-top {
 	animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -42,41 +32,13 @@ width: 100%  ;
       text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
     }
   }
-/* .kenburns-top {
-    position: absolute;
-    left: -1%;
-    top: -1%;
-    height: 100%;
-    width: 101%;
-    /* background-image: url('bgc.jpg'); 
-/* background-attachment: fixed; */
-/* background-size: cover;
-/* background-repeat: no-repeat; */
-/* background-position: center; 
-	        animation: kenburns-top 5s ease-out both; */
-/* } */ 
- 
-/* @keyframes kenburns-top {
-    0% {
-        transform: scale(1.25) translateY(-15px); 
-        transform-origin: 10%; 
-    }
-    100% {
-        transform: scale(1) translateY(0); 
-        transform-origin: 100% 100%;
-    }
-  } */
   
   ngb-carousel {
-    /* max-width: 700px; */
     position: relative;
-    /* top: -50% !important; */
     margin: 20px auto;
     width: 100% !important;
-    /* height: 50% !important; */
     border-radius: 10px !important;
    border: solid black;
-    /* margin: 50px auto; */
 }
 
 ngb-carousel img {
@@ -125,7 +87,6 @@ ngb-carousel {
 
 .fade-in {
     animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
-    /* position: fixed; */
   }
   
   @keyframes fade-in {

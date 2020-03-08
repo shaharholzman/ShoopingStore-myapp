@@ -29,6 +29,7 @@ export class OrderComponent implements OnInit {
   public dateOrder:any = []
   public street:string = ""
   public moment: any = moment
+  public arr:any = []
   matcher = new MyErrorStateMatcher();
   
   constructor(public fb:FormBuilder,public sm:MainService,public su:UserService,public mts:MatSnackBar,public router:Router) { 
@@ -56,10 +57,20 @@ export class OrderComponent implements OnInit {
     const day = d.getDay();
     return day !== 6;
   }
+  
+  // marks full book date
+  dateClass = (d:Date) => {
+        let selected = false;
+        selected = this.arr.some((item) => 
+        new Date(item).getFullYear()  == d.getFullYear()
+        &&   new Date(item).getDate() == d.getDate() 
+        &&   new Date(item).getMonth() == d.getMonth())
+        
+        return selected ? 'example-custom-date-class' : undefined;
+    }
 
   // Check if date if full-book
   checkDate(event){
-    console.log(event.target.value)
     let new_data = this.moment(new Date(event.target.value)).format('D MMM YYYY')
     let bool = this.dateOrder.findIndex(item => 
       this.moment(new Date(item)).format('D MMM YYYY') == new_data)
@@ -120,6 +131,8 @@ export class OrderComponent implements OnInit {
           }
         }  
       }
+      this.dateOrder.map(item => 
+      this.arr.push(this.moment(new Date(item)).format()))
         },
         err => {
           if(err.status === 401){
@@ -128,7 +141,7 @@ export class OrderComponent implements OnInit {
           this.mts.open('We are sorry, something happened in our system, please try again','close')
         }
       )
-  
+    
         
     }
     

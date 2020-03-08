@@ -22,7 +22,6 @@ export class MainOrderComponent implements OnInit {
 
   // GoHome------------------------------------>
   GoHome(){
-    // this.router.navigateByUrl('main/home')
     this.su.sendHome()
   }
 
@@ -48,8 +47,11 @@ export class MainOrderComponent implements OnInit {
 
 
       this.sm.complitedOrder = false
+      this.su.stateLog = true
       // // verify
       this.su.DoVerify()
+
+
 
   }
 

@@ -16,7 +16,6 @@
     width: 100%;
     height: 100%;
     background-color: #f4f4f4;
-
 }
 
 .inp{
@@ -187,19 +186,20 @@ p{
 }    
 
 .bottom_box{
-    position: relative;
-    bottom: 10px;
+    position: absolute;
+    bottom: 2px;
+    right: 2.5%;
     margin: 0px;
     height: 80%;
-    width: 100%;
+    width: 95%;
     background-color: #E8E8F0;
     border-radius: 10px;
 }    
 
 .img{
-    position: relative;
-    top: 5px;
-    left: 20%;
+    position: absolute;
+    top: 15px;
+    left: 73%;
     height: 130px;
     width: 150px;
     display: inline-block;
@@ -211,16 +211,16 @@ p{
  }    
 
  .form_add{
-     width: 50%;
+     position: absolute;
+     top: 30%;
+     left: 10%;
+     width: 250px;
      display: inline-block;
  }
 
-.add_input{
-     width: 50%; 
-}
 
 .add{
-    position: relative;
+    position: absolute;
     left: 80%;
 }
 

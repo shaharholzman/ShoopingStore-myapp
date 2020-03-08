@@ -92,7 +92,7 @@ h3{
     border: solid grey 0.5px;
 }
 
-.box_product{
+.listGroupItem{
     position: relative;
     width: 100%;
 }
@@ -142,3 +142,6 @@ img{
   }
   
 
+.serachVal{
+    background-color: red;
+}

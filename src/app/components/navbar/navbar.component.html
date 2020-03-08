@@ -4,5 +4,6 @@
         <div class="B">
          <p>Contact with us (054-2299850)</p>   
          <p>Hello {{su.guest}} </p>
+         <button *ngIf="su.stateLog" class="btn btn-outline-secondary" (click)="GetMudaleLogOut()">LogOut</button>
         </div>
 </div>

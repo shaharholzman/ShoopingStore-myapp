@@ -1,12 +1,4 @@
-/* .component_side{
-  height: 100%;
-  width: 100%;
-} */
-
 .top{
-  /* margin-top: 4px; */
-    /* position: relative; */
-    /* top: 2.5%; */
     width: 100%;
     z-index: 998;
 }
@@ -32,12 +24,6 @@ i{
   display: block;
   margin: 5px auto;
 }
-/* button[type='submit']{
-  display: block;
-  margin: 5px auto;
-  background-color:#A7E884;
-
-} */
 
 .fade-in {
     animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;

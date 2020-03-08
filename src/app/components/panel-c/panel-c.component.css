@@ -7,8 +7,10 @@
 }
 
 .fade-in {
-    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
-    position: fixed;
+  color: rgb(230, 223, 132);
+  font-weight: bold!important; 
+  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
+  position: fixed;
   }
   
   @keyframes fade-in {

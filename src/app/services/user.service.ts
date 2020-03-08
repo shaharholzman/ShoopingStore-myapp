@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 
 export class UserService {
 
+  public stateLog:boolean = false
   public form_A:any = []
   public Have_VT:boolean = false
   public New_User:boolean = false
@@ -19,6 +20,7 @@ export class UserService {
   public order:any = {}
   public cart:any = []
   public productsOfCart:any = []
+  public ProductsOfCartLowerCase:any = []
   public products:any = []
   public guest:string = 'guest' 
   public user:any = []
@@ -78,6 +80,15 @@ export class UserService {
       }
   }
   
+
+  //LogOut & Refrash Token
+  LogOut(){
+    const headers = new HttpHeaders({
+      'content-Type':'application/json'
+    })
+    return this.http.get(`http://localhost:3000/users/LogOut`,{headers,withCredentials:true,responseType:'text'})
+
+  }
 
   // Register_A----------------------------------------------------------------->
   Register_A(body){

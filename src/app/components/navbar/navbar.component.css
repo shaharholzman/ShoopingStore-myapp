@@ -1,72 +1,22 @@
 .navbar{
     width: 100%;
     height: 100%;
-    box-shadow: 2px 2px 20px 2px black;
-    
+    box-shadow: 2px 2px 20px 2px black;  
 }
 
 .B{
     color:  white;
     position: relative;
-    /* top: -95%; */
-    top: -5px;
+    top: -10px;
     left: 82%;
     display: inline-block;
     position: relative;
 }
 
-.container {
-    margin: auto;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 0 0 200px;
-}
-
 p{
-    line-height: 2px;
-}
-/* .animate {
-    font-size: 20px;
-    margin: 100px 0 0;
-    border-bottom: 2px solid #ccc;
+    line-height: 20px;
 }
 
-.animate span {
-    display: inline-block;
-}
- */
-
-
-/* .seven span {
-    color: #050505;
-    opacity: 0;
-    transform: translate(-150px, 0) scale(.3);
-    animation: leftRight .6s forwards;
-}
-
-
-@keyframes leftRight {
-    40% {
-        transform: translate(50px, 0) scale(.7);
-        opacity: 1;
-        color: #1833cf;
-    }
-
-    60% {
-        color: #6177aa;
-    }
-
-    80% {
-        transform: translate(0) scale(2);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(0) scale(1);
-        opacity: 1;
-    }
-} */
 h1{
     display: inline-block;
     position: fixed;
@@ -76,4 +26,11 @@ h1{
     color: rgb(230, 223, 132);
     font-family:Brush Script MT, Brush Script Std, cursive ;   
     font-weight: bold!important; 
+}
+
+button{
+    position: fixed;
+    right: 5%;
+    top: 13%;
+    display: inline-block;
 }

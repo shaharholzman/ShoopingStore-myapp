@@ -31,6 +31,7 @@
         <input  matInput [matDatepickerFilter]="myFilter"  [matDatepicker]="picker" placeholder="Deliveiry Date" formControlName="DeliveryDate" (dateChange)="checkDate($event)">
         <mat-datepicker-toggle  matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker   #picker></mat-datepicker>
+        <mat-datepicker [dateClass]="dateClass" #picker></mat-datepicker>
         <mat-error *ngIf="form.controls.DeliveryDate.hasError('required')">
           Delivery Date is <strong>required</strong>
         </mat-error>  

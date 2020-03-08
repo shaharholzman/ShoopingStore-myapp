@@ -36,24 +36,23 @@
         <i  class="material-icons x" (click)="GetProductAndForm($event)">close</i>
             <p class="p"><strong>Item:</strong>{{AddProduct[0].name}}</p>
             <p  class="p1"><strong>Price:</strong> {{AddProduct[0].price}}$</p>
+          
             <p *ngIf="amount" class="p1"><strong>Total Price:</strong>{{amount}}$</p>
          <div class="bottom_box">
          <form class="form_add" [formGroup]="form_input" (ngSubmit)="AddProductToCart()">
             <button class="btn add" [disabled]="form_input.invalid"  type="submit"><i class="material-icons"> add_shopping_cart </i>
             </button>
 
-            
-            <mat-form-field class="example-full-width add_input">
-                <input matInput type="number" placeholder="amount of product" formControlName="add" (input)="AddAmount($event)">
-                <mat-error *ngIf="form_input.controls.add.hasError('required')">
-                    amount of Item is <strong>required</strong>
-                </mat-error>
-                <mat-error *ngIf="form_input.hasError('notValid')">
-                </mat-error>
-            </mat-form-field>
-            
-        </form>  
-
+                <mat-form-field class="example-full-width">
+                    <input matInput type="number" placeholder="amount of product" formControlName="add" (input)="AddAmount($event)">
+                    <mat-error *ngIf="form_input.controls.add.hasError('required')">
+                        amount of Item is <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="form_input.hasError('notValid')">
+                    </mat-error>
+                </mat-form-field>
+                
+            </form>  
             <img class="img" src={{AddProduct[0].img}} alt="">
         
     </div>

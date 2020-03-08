@@ -49,8 +49,10 @@ export class MainUserComponent implements OnInit {
   
   ngOnInit() {
 
+  this.su.stateLog = true
   // verify
   this.su.DoVerify()
+  this.sm.width ='100%'
 
 
   }

@@ -41,3 +41,7 @@ button[type='submit']{
   margin: 5px auto;
 }
 
+.example-custom-date-class {
+  background: red;
+  border-radius: 100%;
+}
