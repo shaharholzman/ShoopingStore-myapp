@@ -24,6 +24,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 
 export class ViewComponent implements OnInit {
   
+
+  
   public form:FormGroup
   public form_input:FormGroup
   public state_input:boolean = false

@@ -12,7 +12,9 @@
 
 <mat-grid-list cols="{{sm.categories.length}}" class="categories" rowHeight="43.5px">
    <mat-grid-tile *ngFor="let cat of sm.categories">
-       <button class="btn btn-outline-info"  id={{cat.id}} (click)="GetProductsOfCategories($event)">{{cat.name}}</button>
+     
+    <button class="btn btn-outline-info hvr-shutter-out-horizontal"  id={{cat.id}} (click)="GetProductsOfCategories($event)">{{cat.name}}</button>
+    
    </mat-grid-tile>
 </mat-grid-list>
 
