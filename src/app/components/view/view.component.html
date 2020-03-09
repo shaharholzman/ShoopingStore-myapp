@@ -22,13 +22,14 @@
 
      <mat-grid-list cols="4" rowHeight="136.5px" > 
          
-         <mat-grid-tile class="product pro" *ngFor="let pro of su.products" id={{pro.name}}  >            
-          <button id={{pro.name}} class="btn1" (click)="GetProductAndForm($event)">Add</button>
-            <img id={{pro.name}}  src={{pro.img}} alt="" (click)="GetProductAndForm($event)">
-                 <div id={{pro.name}} class="verb" (click)="GetProductAndForm($event)">
-                     <p id={{pro.name}}>{{pro.name}}</p>
-                     <p id={{pro.name}}>Price: {{pro.price}}$</p>
-                    </div>
+         <mat-grid-tile class="product pro" *ngFor="let pro of su.products" id={{pro.name}}   >  
+             <span class="cover" id={{pro.name}}  (click)="GetProductAndForm($event)"></span>         
+             <button id={{pro.name}} class="btn1" (click)="GetProductAndForm($event)">Add</button>
+              <img id={{pro.name}}  src={{pro.img}} alt="" (click)="GetProductAndForm($event)">
+             <div id={{pro.name}} class="verb" (click)="GetProductAndForm($event)">
+                 <p id={{pro.name}}>{{pro.name}}</p>
+                 <p id={{pro.name}}>Price: {{pro.price}}$</p>
+                </div>
             </mat-grid-tile>
         </mat-grid-list>
 

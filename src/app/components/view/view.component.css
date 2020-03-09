@@ -70,25 +70,23 @@
    
 }
 
-.btn:active{
+/* .btn:active{
     box-shadow: none;
     top: 5px; 
-}
+} */
 
 /* Shutter Out Horizontal */
 .hvr-shutter-out-horizontal {
     display: inline-block;
     vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     position: relative;
     background: #e1e1e1;
     color: black;
-    -webkit-transition-property: color;
     transition-property: color;
-    -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    
   }
 
   .hvr-shutter-out-horizontal:before {
@@ -100,15 +98,10 @@
     left: 0;
     right: 0;
     background: #2098D1;
-    -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transform-origin: 50%;
     transform-origin: 50%;
-    -webkit-transition-property: transform;
     transition-property: transform;
-    -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
     border: black;
     border-radius: 10px;
@@ -120,8 +113,8 @@
     
   }
   .hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
-    -webkit-transform: scaleX(1);
     transform: scaleX(1);
+
   }
 
 
@@ -237,6 +230,11 @@ p{
     margin-left: 5px;
 }    
 
+.cover{
+    height: 100%;
+    width: 100%;
+}
+
 .bottom_box{
     position: absolute;
     bottom: 2px;
@@ -323,3 +321,4 @@ p{
     transform: translate(-50%, -50%);
     transition: width 0.2s ease, height 0.2s ease;
   }
+
