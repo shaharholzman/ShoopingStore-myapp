@@ -28,7 +28,7 @@ export class AdminService {
       setTimeout(() => {
         
         window.location.reload()
-      }, 0.5);
+      }, 50);
     }
     // Get Categories(1)--------------------------------------------------------->
     GetCategories(){

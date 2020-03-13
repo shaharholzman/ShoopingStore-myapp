@@ -68,7 +68,7 @@ export class UserService {
         this.router.navigateByUrl('/')
         setTimeout(() => {     
           window.location.reload()
-        }, 0.5);
+        }, 40);
   }
   
    // Get Total Price Of Cart -------------------------------------------------->

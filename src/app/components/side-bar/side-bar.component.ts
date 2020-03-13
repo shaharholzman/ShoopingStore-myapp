@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MainService } from 'src/app/services/main.service';
@@ -17,7 +17,7 @@ export class SideBarComponent implements OnInit {
     public router:Router,
     public sm:MainService,
     public su:UserService,
-    public mts:MatSnackBar,
+    public mts:MatSnackBar
     ) 
     { }
  
@@ -28,12 +28,16 @@ export class SideBarComponent implements OnInit {
 
   // Delete Product from Cart------------------------------------------------------>
   DeleteProductFromCart(event){
+    let shadesEl = document.getElementById(`${event.target.id}+1`);
     this.sm.DeleteProductFormCart(event).subscribe(
       res => {      
-          this.su.GetProductsOfCart().subscribe(
-            res => {
+        this.su.GetProductsOfCart().subscribe(
+          res => {
+            shadesEl.classList.add('slide-out-blurred-left')
+            setTimeout(() => { 
               this.su.productsOfCart = JSON.parse(res)
               this.su.GetTotalPriceOfCart()
+            }, 800);
             },
             err => {
               if(err.status === 401){

@@ -17,13 +17,6 @@ export class ViewAdminComponent implements OnInit {
 
   constructor(public elementRef: ElementRef,public render:Renderer,public sa:AdminService,public sm:MainService,public su:UserService,public mts:MatSnackBar,public fb:FormBuilder) { }
 
-  ChangeScreen(event:any) {
-    // this.render.setElementClass("selected");
-    console.log(this.render.setElementClass(event.target,"selected",true))
-    console.log( this.elementRef.nativeElement.classList.add('class'))
-    this.elementRef.nativeElement.classList.add('class');
-    this.elementRef.nativeElement.classList.remove('class')
-   }
 
   // Get product By Search-------------------------------------------->
   GetProduct(event) { 
@@ -75,8 +68,12 @@ export class ViewAdminComponent implements OnInit {
 
   // Get Data of product for update/Get form for update--------------------------->
   GetProductAndForm(event){
-   this.sa.GetProductForUpdate(event).subscribe(
-     res => {
+    // let shadesEl = document.querySelector('.product');
+    // shadesEl.classList.remove('border')
+    this.sa.GetProductForUpdate(event).subscribe(
+      res => {
+        // let shadesEl1 = document.getElementById(`${event.target.id}+1`);
+        // shadesEl1.classList.add('border')
       this.sa.productToUpdate = JSON.parse(res)
       this.sa.state_update = true
       this.sa.state_add = false

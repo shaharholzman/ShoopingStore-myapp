@@ -21,13 +21,13 @@
 
         <mat-grid-list cols="4" rowHeight="150px" > 
             
-            <mat-grid-tile  class="product" *ngFor="let pro of su.products" id={{pro.id}} >
+            <mat-grid-tile  class="product" *ngFor="let pro of su.products" id={{pro.id}}+1 >
                 <img src={{pro.img}} alt="">
                 <div class="verb">
                     <p>{{pro.name}}</p>
                     <p><strong id={{pro.id}}>Price:</strong> {{pro.price}}$</p>
                 </div>
-                <button id={{pro.id}}  class="btn_update btn btn-outline-warning" (click)="GetProductAndForm($event)" (click)="ChangeScreen($event)">Upadte</button>
+                <button id={{pro.id}}  class="btn_update btn btn-outline-warning hvr-shutter-out-horizontal" (click)="GetProductAndForm($event)">Upadte</button>
             </mat-grid-tile>
         </mat-grid-list>
         

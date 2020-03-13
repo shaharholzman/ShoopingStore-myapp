@@ -9,7 +9,7 @@
         
         <div class="list">
             
-            <mat-grid-list  *ngFor="let pro of su.productsOfCart" cols="1" rowHeight='90px' id={{pro.id}} class="fade-in"   >
+            <mat-grid-list  *ngFor="let pro of su.productsOfCart" cols="1" rowHeight='90px' id={{pro.id}}+1    >
                 
                 <mat-grid-tile id={{pro.id}} class="box_product hvr-shutter-out-horizontal"  >
                     <i id={{pro.id}} class="x material-icons" (click)="DeleteProductFromCart($event)">close</i>
@@ -19,7 +19,7 @@
                         <p [style.width]="sm.width"><strong>Amount:</strong> {{pro.amount}}, <strong>Price:</strong> {{pro.total_price}}$</p>
                     </div>
                 </mat-grid-tile>
-                
+
             </mat-grid-list>
             
         </div>
