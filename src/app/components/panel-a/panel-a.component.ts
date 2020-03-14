@@ -55,7 +55,11 @@ checkPasswords(group: FormGroup) {
 
 // change modal Login VS Register
 GoRegister(){
-      this.state_A = !this.state_A
+  this.su.guest = 'guest'
+  this.su.Have_VT = false
+  this.su.Login_Order = false
+  this.su.Login_Cart = false
+  this.state_A = !this.state_A
 }
 
 // GoToNextPageUser------------------------------------------------------------->

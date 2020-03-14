@@ -26,6 +26,10 @@ export class SideBarAdminComponent implements OnInit {
 
   // Add Product------------------------------------------------->
   AddProduct(){
+    let shadesEl = document.querySelectorAll('.product')
+    for(let i = 0 ; i < shadesEl.length;i++){
+      shadesEl[i].classList.add('border')
+    }  
     this.sa.AddProduct(this.addform.value).subscribe(
       res => {
         this.sa.state_add = !this.sa.state_add

@@ -81,6 +81,12 @@ export class ViewComponent implements OnInit {
   GetProductsOfCategories(event){
     this.sm.GetProductsOfCategories(event).subscribe(
       res => {
+        let shadesEl = document.querySelectorAll('.btn-outline-info')
+        for(let i = 0 ; i < shadesEl.length;i++){
+          shadesEl[i].classList.remove('active')
+        }
+        let shadesEl1 = document.getElementById(`${event.target.id}`)
+              shadesEl1.classList.add('active')
         this.su.products = JSON.parse(res)
       },
       err => {

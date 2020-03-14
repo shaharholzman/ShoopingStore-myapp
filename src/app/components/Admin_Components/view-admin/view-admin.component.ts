@@ -20,7 +20,6 @@ export class ViewAdminComponent implements OnInit {
 
   // Get product By Search-------------------------------------------->
   GetProduct(event) { 
-      console.log(event.target.value)
       if(event.target.value.length === 0){
         this.su.GetAllProducts().subscribe(
           res => {
@@ -68,12 +67,14 @@ export class ViewAdminComponent implements OnInit {
 
   // Get Data of product for update/Get form for update--------------------------->
   GetProductAndForm(event){
-    // let shadesEl = document.querySelector('.product');
-    // shadesEl.classList.remove('border')
+    let shadesEl = document.querySelectorAll('.product')
+    for(let i = 0 ; i < shadesEl.length;i++){
+      shadesEl[i].classList.add('border')
+    }
     this.sa.GetProductForUpdate(event).subscribe(
       res => {
-        // let shadesEl1 = document.getElementById(`${event.target.id}+1`);
-        // shadesEl1.classList.add('border')
+        let shadesEl1 = document.getElementById(`${event.target.id}+1`);
+        shadesEl1.classList.remove('border')
       this.sa.productToUpdate = JSON.parse(res)
       this.sa.state_update = true
       this.sa.state_add = false
